@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="認識陳詩妤從康寧大學應用外語系到國立臺北護理健康大學醫護教育暨數位學習系的學習歷程。">
+  <title>關於我｜陳詩妤</title>
+  <link rel="stylesheet" href="site-style.css">
+  <link rel="stylesheet" href="typography.css">
+  <style>
+    body { background:linear-gradient(180deg,#EEF4F2 0,#F7F8F5 48%,#F7F8F5 100%); }
+    header,main,footer { position:relative; z-index:1; }
+    .snow-layer { position:fixed; inset:0; z-index:0; overflow:hidden; pointer-events:none; }
+    .snowflake { position:absolute; top:-12vh; left:var(--x); width:var(--size); height:var(--size); border-radius:50%; background:rgba(255,255,255,.82); box-shadow:0 0 9px rgba(255,255,255,.5); animation:snowfall var(--duration) linear var(--delay) infinite; }
+    @keyframes snowfall { to { transform:translate3d(var(--drift),118vh,0) rotate(360deg); } }
+    .learning-hero { padding-bottom:64px; }
+    .learning-hero h1 { font-size:clamp(2.6rem,5vw,4.2rem); }
+    .learning-hero .art { transform:rotate(-2deg); }
+    .journey-intro { max-width:42em; margin:0 0 38px; color:#46545A; }
+    .timeline { position:relative; display:grid; gap:28px; margin-left:8px; padding:2px 0 4px 42px; border-left:2px solid rgba(71,103,86,.38); }
+    .timeline-item { position:relative; }
+    .timeline-item::before { content:''; position:absolute; left:-52px; top:28px; width:18px; height:18px; border:5px solid #EEF4F2; border-radius:50%; background:var(--coral); box-shadow:0 0 0 1px rgba(54,93,107,.28); }
+    .timeline-label { margin:0 0 10px; color:var(--coral); font-size:.88rem; font-weight:700; letter-spacing:.1em; }
+    .journey-card { padding:30px; }
+    .journey-card h3 { margin-top:0; font-size:1.55rem; }
+    .journey-card.profile { background:var(--ink); }
+    .journey-card.profile p { color:#E4EFEB; }
+    .journey-card .facts { margin-bottom:0; }
+    .contact { padding-top:80px; }
+    @media (max-width:720px) { .learning-hero { padding-bottom:48px; } .timeline { margin-left:4px; padding-left:30px; } .timeline-item::before { left:-41px; } .journey-card { padding:24px; } }
+    @media (prefers-reduced-motion:reduce) { .snowflake { animation:none; } }
+  </style>
+  <script src="site-interactions.js" defer></script>
+</head>
+<body>
+  <div class="snow-layer" aria-hidden="true"></div>
+  
+  <main class="wrap">
+    <section class="hero learning-hero">
+      <div><span class="eyebrow">HELLO, I'M SHIH-YU</span><h1>我叫陳詩妤</h1><p>歡迎來到我的小誌。這裡會慢慢收集我的課堂作品、學習成果，以及讓我持續成長的每一段經驗。</p></div>
+      <div class="art"><img src="fuzzy-notes.png" alt="一隻蓬鬆小動物趴在筆記本上"><div class="art-note">慢慢收集日子</div></div>
+    </section>
+    <section aria-labelledby="journey-title">
+      <div class="section-title"><h2 id="journey-title">學習歷程</h2></div>
+      <p class="journey-intro">把每一段學習好好留下來，也讓這些經驗慢慢長成自己的樣子。</p>
+      <div class="timeline">
+        <article class="timeline-item"><p class="timeline-label">學習起點</p><div class="card journey-card"><h3>康寧大學應用外語系</h3><p class="soft">曾就讀康寧大學應用外語系，在學習過程中培養外語表達與跨文化溝通能力，並開啟對不同學習經驗的探索。</p></div></article>
+        <article class="timeline-item"><p class="timeline-label">海外實習</p><div class="card journey-card"><h3>日本休暇村館山實習</h3><p class="soft">曾赴日本休暇村館山進行為期兩個月的海外實習，透過實際工作環境練習外語溝通、服務應對與跨文化合作。</p></div></article>
+        <article class="timeline-item"><p class="timeline-label">目前就讀</p><div class="card journey-card profile"><h3>國立臺北護理健康大學<br>醫護教育暨數位學習系</h3><p>目前就讀國立臺北護理健康大學醫護教育暨數位學習系，持續探索健康教育、數位教材與互動學習的可能，將學習內容轉化為清楚、好理解的體驗。</p><div class="facts"><div><b>國立臺北護理健康大學</b>就讀學校</div><div><b>醫護教育暨數位學習系</b>所屬科系</div><div><b>數位學習設計</b>學習方向</div></div></div></article>
+      </div>
+    </section>
+    <section class="contact" aria-labelledby="contact-title"><div class="section-title"><h2 id="contact-title">歡迎與我聯繫合作</h2></div><article class="card"><h3>一起創造有意思的作品吧！</h3><p class="soft">如果您對我的作品感興趣，或有合作、交流的想法，歡迎填寫下面的表單。</p><form id="contact-form"><label for="name">你的名字</label><input id="name" name="name" type="text" autocomplete="name" required><label for="email">你的電子郵件</label><input id="email" name="email" type="email" autocomplete="email" required><label for="message">想對我說的話</label><textarea id="message" name="message" required></textarea><button type="submit">寄出訊息</button><p id="form-note" aria-live="polite"></p></form><p class="email-label">我的電子郵件</p><a class="email" href="mailto:xilinlin803@gmail.com">xilinlin803@gmail.com</a></article></section>
+  </main>
+  <footer class="wrap">© 2026 陳詩妤的作品集 · 慢慢累積每一份學習成果</footer>
+  <script>
+    const snowLayer = document.querySelector('.snow-layer');
+    for (let i = 0; i < 30; i += 1) {
+      const flake = document.createElement('i');
+      flake.className = 'snowflake';
+      flake.style.setProperty('--x', `${Math.random() * 100}%`);
+      flake.style.setProperty('--size', `${4 + Math.random() * 7}px`);
+      flake.style.setProperty('--duration', `${9 + Math.random() * 11}s`);
+      flake.style.setProperty('--delay', `${-Math.random() * 18}s`);
+      flake.style.setProperty('--drift', `${-70 + Math.random() * 140}px`);
+      snowLayer.appendChild(flake);
+    }
+    document.getElementById('contact-form').addEventListener('submit', function (event) {
+      event.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      const subject = encodeURIComponent(`來自 ${name} 的合作訊息`);
+      const body = encodeURIComponent(`姓名：${name}\n電子郵件：${email}\n\n訊息：\n${message}`);
+      document.getElementById('form-note').textContent = '正在開啟郵件程式…';
+      window.location.href = `mailto:xilinlin803@gmail.com?subject=${subject}&body=${body}`;
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
